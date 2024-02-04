@@ -22,7 +22,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func didTapNewNote() {
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController else {
+            return
+        }
+        vc.title = "New Note"
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // Table
