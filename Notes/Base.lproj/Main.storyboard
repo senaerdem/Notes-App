@@ -87,9 +87,39 @@
                     <view key="view" contentMode="scaleToFill" id="cz2-TJ-UiN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVm-7Y-g3b">
+                                <rect key="frame" x="10" y="69" width="373" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="kf5-Vx-9DF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2i8-h6-6bH">
+                                <rect key="frame" x="10" y="131" width="373" height="677"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xKF-js-3Ra"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2i8-h6-6bH" firstAttribute="leading" secondItem="xKF-js-3Ra" secondAttribute="leading" constant="10" id="1EN-qn-ads"/>
+                            <constraint firstItem="2i8-h6-6bH" firstAttribute="top" secondItem="sVm-7Y-g3b" secondAttribute="bottom" constant="10" id="72j-WD-Xmz"/>
+                            <constraint firstItem="xKF-js-3Ra" firstAttribute="bottom" secondItem="2i8-h6-6bH" secondAttribute="bottom" constant="10" id="9i7-aR-ua2"/>
+                            <constraint firstItem="sVm-7Y-g3b" firstAttribute="top" secondItem="xKF-js-3Ra" secondAttribute="top" constant="10" id="IKf-s1-bHl"/>
+                            <constraint firstItem="xKF-js-3Ra" firstAttribute="trailing" secondItem="sVm-7Y-g3b" secondAttribute="trailing" constant="10" id="NNh-oJ-oja"/>
+                            <constraint firstItem="xKF-js-3Ra" firstAttribute="trailing" secondItem="2i8-h6-6bH" secondAttribute="trailing" constant="10" id="OOQ-za-ESX"/>
+                            <constraint firstItem="sVm-7Y-g3b" firstAttribute="leading" secondItem="xKF-js-3Ra" secondAttribute="leading" constant="10" id="SCo-kx-PjT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteField" destination="2i8-h6-6bH" id="Iym-oo-PFg"/>
+                        <outlet property="titleField" destination="sVm-7Y-g3b" id="l0B-nG-GC6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTm-bw-qqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,9 +150,40 @@
                     <view key="view" contentMode="scaleToFill" id="lyW-QQ-6jo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGp-TT-aJV">
+                                <rect key="frame" x="10" y="69" width="373" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="8kl-R3-NsN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXQ-rb-ub0">
+                                <rect key="frame" x="10" y="140" width="373" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ngy-Q3-fsy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CGp-TT-aJV" firstAttribute="top" secondItem="Ngy-Q3-fsy" secondAttribute="top" constant="10" id="0co-1W-qcX"/>
+                            <constraint firstItem="Ngy-Q3-fsy" firstAttribute="trailing" secondItem="CGp-TT-aJV" secondAttribute="trailing" constant="10" id="Ae6-VU-5vD"/>
+                            <constraint firstItem="ZXQ-rb-ub0" firstAttribute="top" secondItem="CGp-TT-aJV" secondAttribute="bottom" constant="10" id="C9m-hm-BXe"/>
+                            <constraint firstItem="Ngy-Q3-fsy" firstAttribute="trailing" secondItem="ZXQ-rb-ub0" secondAttribute="trailing" constant="10" id="ObG-IY-TV4"/>
+                            <constraint firstItem="CGp-TT-aJV" firstAttribute="leading" secondItem="Ngy-Q3-fsy" secondAttribute="leading" constant="10" id="Qva-dM-nZj"/>
+                            <constraint firstItem="Ngy-Q3-fsy" firstAttribute="bottom" secondItem="ZXQ-rb-ub0" secondAttribute="bottom" constant="10" id="t3P-KP-stX"/>
+                            <constraint firstItem="ZXQ-rb-ub0" firstAttribute="leading" secondItem="Ngy-Q3-fsy" secondAttribute="leading" constant="10" id="yOE-x0-S87"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteLabel" destination="ZXQ-rb-ub0" id="pVk-zi-q2W"/>
+                        <outlet property="titleLabel" destination="CGp-TT-aJV" id="TgE-ZZ-9bf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxW-O0-Kl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,6 +191,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
